@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        tr{
+            border: 1px solid black;
+        }
+        th{
+            border: 1px solid black;
+            padding: 15px 0px;
+        }
+    </style>
+</head>
+<body>
+    <div class="header">
+        Entries per page
+        <select id="students" style="margin-top: 10px;">
+            <option value="1">1</option>
+            <option value="5">5</option>
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+        </select>
+        <div class="ser"  style="margin-left: 1000px;">
+            Search <input type="search" name="search" id="search">
+        </div>
+    </div>
+    <table class="table" style="margin-top: 25px;width: 100%;">
+        <tr>
+            <th>Name</th>
+            <th>Position</th>
+            <th>Office</th>
+            <th>Age</th>
+            <th>Start Date</th>
+            <th>Salary</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+    </table>
+    <button class="add" style="margin-top: 30px; padding: 15px 20px; background-color: rgb(32, 10, 234); cursor: pointer;color: white;">Add Student</button>
+    <script src="./modules/main.js"></script>
+</body>
+</html>
