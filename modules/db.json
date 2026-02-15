@@ -1,16 +1,6 @@
 {
   "students": [
     {
-      "Id": 3,
-      "Name": "shimaa mahmoud",
-      "Position": "designer",
-      "Office": "ryiad",
-      "Age": 33,
-      "StartDate": "10-8-2027",
-      "Salary": 986544,
-      "id": "ec79"
-    },
-    {
       "Id": 4,
       "Name": "ismail hossam",
       "Position": "programmer",
@@ -19,16 +9,6 @@
       "StartDate": "23-1-2010",
       "Salary": 345722,
       "id": "c5fe"
-    },
-    {
-      "Id": 5,
-      "Name": "hossam nasr",
-      "Position": "senior engineer",
-      "Office": "alex",
-      "Age": 34,
-      "StartDate": "5-5-2033",
-      "Salary": 76540,
-      "id": "fe78"
     },
     {
       "Id": 6,

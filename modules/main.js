@@ -36,18 +36,36 @@ window.addEventListener("load", function() {
             btn1 = document.createElement("button");
             // btn1.innerText = "Edit";
             // btn1.value = "Edit";
-            btn1.innerHTML = '<a href="../indexUpdate.html">Add Student</a>';
+            btn1.innerHTML = '<a href="../indexUpdate.html">Update Student</a>';
             btn1.className = `btn ${employee.Id}`;
-            btn1.style.cssText = `width:100%;height:50%;background-color:blue;cursor:pointer;color:white`;
+            btn1.style.cssText = `width:100%;height:50%;cursor:pointer;color:white`;
+            btn1.addEventListener("click",async function(e){
+                //e.preventDefault();
+                const res = await fetch(`http://localhost:3000/students/${employee.id}`);
+                const data = await res.json();
+                console.log(data);
+                localStorage.setItem("id", employee.id);
+            })
             td7 = document.createElement("td");
             td7.style.cssText = `border: 1px solid black;padding: 15px;`;
             td7.appendChild(btn1);
             tr.appendChild(td7);
             btn2 = document.createElement("button");
-            btn2.innerText = "Delete";
-            btn2.value = "Delete";
+            // btn2.innerText = "Delete";
+            // btn2.value = "Delete";
+            btn2.innerHTML = '<a href="../indexUpdate.html">Delete Student</a>';
+            btn2.style.cssText = `width:100%;height:50%;cursor:pointer;color:white`;
             btn2.className = `btn ${employee.Id}`;
-            btn2.style.cssText = `width:100%;height:50%;background-color:blue;cursor:pointer;color:white`;
+            btn2.style.cssText = `width:100%;height:50%;cursor:pointer;color:white`;
+            btn2.addEventListener("click",function(e){
+                e.preventDefault();
+                //console.log(id.value);
+                fetch("http://localhost:3000/students/"+employee.id, {
+                method: 'DELETE'
+                }).then(res => res.json()).then(res => {
+                console.log("RES", res);
+                });
+            })
             td8 = document.createElement("td");
             td8.style.cssText = `border: 1px solid black;padding: 15px;`;
             td8.appendChild(btn2);
@@ -90,16 +108,19 @@ window.addEventListener("load", function() {
             td6.style.cssText = `border: 1px solid black;padding: 15px`;
             tr.appendChild(td6);
             btn1 = document.createElement("button");
-            btn1.innerText = "Edit";
-            btn1.value = "Edit";
-            btn1.style.cssText = `width:100%;height:50%;background-color:blue;cursor:pointer;color:white`;
+            // btn1.innerText = "Edit";
+            // btn1.value = "Edit";
+            btn1.innerHTML = '<a href="../indexUpdate.html">Update Student</a>';
+            btn1.style.cssText = `width:100%;height:50%;cursor:pointer;color:white`;
             td7 = document.createElement("td");
             td7.style.cssText = `border: 1px solid black;padding: 15px;`;
             td7.appendChild(btn1);
             tr.appendChild(td7);
             btn2 = document.createElement("button");
-            btn2.innerText = "Delete";
-            btn2.value = "Delete";
+            // btn2.innerText = "Delete";
+            // btn2.value = "Delete";
+            btn1.innerHTML = '<a href="../indexUpdate.html">Delete Student</a>';
+                btn1.style.cssText = `width:100%;height:50%;cursor:pointer;color:white`;
             btn2.style.cssText = `width:100%;height:50%;background-color:blue;cursor:pointer;color:white`;
             td8 = document.createElement("td");
             td8.style.cssText = `border: 1px solid black;padding: 15px;`;
